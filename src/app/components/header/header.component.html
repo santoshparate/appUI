@@ -1,0 +1,14 @@
+<span style="width: 100%;">
+<form class="example-form">
+    <input type="text"
+           placeholder="Search"
+           [formControl]="myControl"
+           [matAutocomplete]="auto" style="border: none;width: 250px;height: 40px;background-color: rgb(255, 255, 255)">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async " [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </form>
+</span>
+  
